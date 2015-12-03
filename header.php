@@ -26,32 +26,34 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a href="http://bowiereading.com/" alt="Back to Bowie Center" id="back-to-bowie-link"><div id="back-to-bowie">
-		Click to Return to The Bowie Center's Main Website
-	</div></a>
+	<a href="http://bowiereading.com/" alt="Back to Bowie Center" id="back-to-bowie-link">
+		<div id="back-to-bowie">
+			Click to Return to The Bowie Center's Main Website
+		</div>
+	</a>
 	<header id="masthead" class="site-header" role="banner">
-		<div class="container">
+		<div class="container header-copy">
 			<div class="row">
-				<div class="col-sm-2">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="img-responsive logo">
-				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-8">
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
 						<h2 class="site-description"><small><?php echo $description; /* WPCS: xss ok. */ ?></small></h2>
 					<?php endif; ?>
+					<div id="mission-statement">
+						<h2 class="header-2">Our Mission</h2>
+						<p>To strengthen confidence, knowledge and strategies in each student by using supportive teaching styles and research proven programs.</p>
+					</div>
 				</div>
-				<div class="col-sm-4 text-center">
-						<h2>Our Mission</h2>
-						<p>&ldquo;To strengthen confidence, knowledge and strategies in each student by using supportive teaching styles and research proven programs.&rdquo;</p>
+				<div class="col-sm-4 hidden-xs">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="img-responsive">
 				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->
 
-		<nav id="site-navigation" class="navbar navbar-default" role="navigation">
-			<div class="container-fluid">
+		<nav id="site-navigation" class="navbar" role="navigation">
+			<div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">

@@ -10,7 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	<header>
+		<h1 class="header-2"><?php echo $post->post_name; ?></h1>
+	</header>
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(

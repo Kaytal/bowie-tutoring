@@ -42,8 +42,5 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-		<aside class="col-md-4">
-
-		</aside>
 	</div><!-- #primary -->
 <?php get_footer(); ?>

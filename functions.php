@@ -120,6 +120,8 @@ function bowie_tutoring_scripts() {
 
 	wp_enqueue_script( 'jquery', 'http://code.jquery.com/jquery-1.11.3.min.js', array(), '1.11.3', true );
 
+	wp_enqueue_script( 'instafeed', get_template_directory_uri() . '/js/instafeed.min.js', array(), '1.4.1', true );
+
 	wp_enqueue_script( 'bootstrap js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array(), '3.3.5', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

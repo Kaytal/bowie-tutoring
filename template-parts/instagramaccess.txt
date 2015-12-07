@@ -1,0 +1,12 @@
+509244a57080486dba2f39417ff11042
+
+curl -F 'client_id=8bcbf8fffd5f465596896edf2fcb0260' \
+-F 'client_secret=20b3d5a908074673b410d6dcdaddc59b' \
+-F 'grant_type=authorization_code' \
+-F 'redirect_uri=https://instagram.com' \
+-F 'code=509244a57080486dba2f39417ff11042' \
+https://api.instagram.com/oauth/access_token
+
+
+
+Access_token: 219769686.8bcbf8f.13922aa210d34149ab8c5cc639b5683f

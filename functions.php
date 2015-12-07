@@ -71,11 +71,6 @@ function bowie_tutoring_setup() {
 		'link',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'bowie_tutoring_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // bowie_tutoring_setup
 add_action( 'after_setup_theme', 'bowie_tutoring_setup' );
@@ -91,24 +86,6 @@ function bowie_tutoring_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'bowie_tutoring_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'bowie_tutoring_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function bowie_tutoring_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'bowie_tutoring' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'bowie_tutoring_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -147,11 +124,17 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function remove_menus(){
+  
+  remove_menu_page( 'edit.php' );                   //Posts
+  remove_menu_page( 'edit-comments.php' );          //Comments
+  remove_submenu_page( 'themes.php', 'customizer.php' );
+  remove_submenu_page( 'themes.php', 'widgets.php' );
+  remove_submenu_page( 'themes.php', 'background.php' );
+  
+}
+add_action( 'admin_menu', 'remove_menus', 999 );

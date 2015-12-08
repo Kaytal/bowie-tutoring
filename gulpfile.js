@@ -12,5 +12,6 @@ gulp.task('sass:watch', function () {
 gulp.task('sass', function () {
   gulp.src('sass/*.sass')
     .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(gulp.dest('css'));
 });

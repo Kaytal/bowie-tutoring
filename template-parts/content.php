@@ -55,6 +55,35 @@
 
 
 	</div>
+	<?php if (is_front_page()) : ?>
+		<h2 class="header-2">Testimonials</h2>
+		<div id="testimonials" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <?php $i=0 ?>
+		    <?php foreach(getTestimonials() as $testimonial) : ?>
+		    	<div class="item <?php if ($i==0) echo 'active' ?>">
+		      	<p><?php echo $testimonial->post_content ?></p>
+		      	<p><span class="testimonial-name">-<?php echo $testimonial->post_title ?></span></p>
+		    	</div>
+		    	<?php $i++ ?>
+		    <?php endforeach ?>
+		  </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#testimonials" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#testimonials" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+	<?php endif ?>
 
 	<footer class="entry-footer">
 		<?php bowie_tutoring_entry_footer(); ?>

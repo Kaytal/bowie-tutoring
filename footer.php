@@ -35,13 +35,13 @@
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <?php wp_footer(); ?>
 <script type="text/javascript">
     var userFeed = new Instafeed({
         get: 'user',
-        userId: '219769686',
-        accessToken: '219769686.8bcbf8f.13922aa210d34149ab8c5cc639b5683f',
+        userId: '2217693093',
+        accessToken: '2217693093.6c75105.5cae5b545b944605ad8dfd0d1e692b32',
         limit: 6,
         template: '<a href="{{link}}"><div class="col-sm-4 col-xs-6 instagram-img-contain"><img src="{{image}}" class="img-responsive instafeed-img"></div></a>',
         resolution: 'standard_resolution'

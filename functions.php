@@ -95,7 +95,7 @@ function bowie_tutoring_scripts() {
 
 	wp_enqueue_script( 'bowie_tutoring-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'jquery', 'http://code.jquery.com/jquery-1.11.3.min.js', array(), '1.11.3', true );
+	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-1.11.3.min.js', array(), '1.11.3', true );
 
 	wp_enqueue_script( 'instafeed', get_template_directory_uri() . '/js/instafeed.min.js', array(), '1.4.1', true );
 
@@ -138,3 +138,14 @@ function remove_menus(){
   
 }
 add_action( 'admin_menu', 'remove_menus', 999 );
+
+function getTestimonials()
+{
+	$args = array(
+		'post_per_page'		=> -1,
+		'post_type'				=> 'testimonial',
+		'post_status'			=> 'publish',
+		);
+
+	return get_posts($args);
+}

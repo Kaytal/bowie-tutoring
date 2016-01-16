@@ -142,10 +142,41 @@ add_action( 'admin_menu', 'remove_menus', 999 );
 function getTestimonials()
 {
 	$args = array(
+		'numberposts'			=> -1,
 		'post_per_page'		=> -1,
 		'post_type'				=> 'testimonial',
 		'post_status'			=> 'publish',
 		);
 
 	return get_posts($args);
+}
+
+function getTutors()
+{
+	$args = array(
+		'numberposts'			=> -1,
+		'post_per_page'		=> -1,
+		'post_type'				=> 'tutor',
+		'post_status'			=> 'publish',
+		'order_by'				=> 'title',
+		'order'						=> 'ASC'
+		);
+
+	return get_posts($args);
+}
+
+function tutorImage( $post_id )
+{
+	$args = array( 'post_id' => $post_id, 'output' => 'html', 'width' => '300', 'height' => '300', 'resize' => 'crop', 'class' => 'img-responsive img-center');
+	return types_render_field( 'tutor-image', $args );
+}
+function tutorSchool( $post_id )
+{
+	$args = array( 'post_id' => $post_id, 'output' => 'raw' );
+	return types_render_field( 'school', $args );
+}
+function tutorInfo( $post_id )
+{
+	$args = array( 'post_id' => $post_id, 'output' => 'raw' );
+	return types_render_field( 'tutor-information', $args );
 }

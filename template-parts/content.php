@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<div class="row">
-		<div class="entry-content <?php if ((is_front_page()) || ($pagename == 'subjects') ||  ($pagename == 'college-preparation') || ($pagename == 'advanced-programs') || ($pagename== 'general-tutoring') || ($pagename == 'act-and-other-test-preparation') || ($pagename == 'home') || ($pagename == 'contact-us')) echo 'col-sm-8'; else echo 'col-sm-12' ?>">
+		<div class="entry-content <?php if ((is_front_page()) || ($pagename == 'subjects') || ($pagename == 'registration-form') ||  ($pagename == 'college-preparation') || ($pagename == 'advanced-programs') || ($pagename== 'general-tutoring') || ($pagename == 'act-and-other-test-preparation') || ($pagename == 'home') || ($pagename == 'contact-us')) echo 'col-sm-8'; else echo 'col-sm-12' ?>">
 			<header>
 				<h1 class="header-2"><?php echo $post->post_title ?></h1>
 			</header>
@@ -33,8 +33,8 @@
 		</div><!-- .entry-content -->
 
 
-		<?php if ((is_front_page()) || ($pagename == 'subjects') || ($pagename == 'college-preparation') || ($pagename == 'advanced-programs') || ($pagename== 'general-tutoring') || ($pagename == 'act-and-other-test-preparation') || ($pagename == 'home') || ($pagename == 'contact-us')) : ?>
-		<div class="hours <?php if ((is_front_page()) ||  ($pagename == 'subjects')||  ($pagename == 'college-preparation') || ($pagename == 'advanced-programs') || ($pagename== 'general-tutoring') || ($pagename == 'act-and-other-test-preparation') || ($pagename == 'home') || ($pagename == 'contact-us')) echo 'col-sm-4' ?>">
+		<?php if ((is_front_page()) || ($pagename == 'subjects') || ($pagename == 'registration-form') || ($pagename == 'college-preparation') || ($pagename == 'advanced-programs') || ($pagename== 'general-tutoring') || ($pagename == 'act-and-other-test-preparation') || ($pagename == 'home') || ($pagename == 'contact-us')) : ?>
+		<div class="hours <?php if ((is_front_page()) ||  ($pagename == 'subjects') || ($pagename == 'registration-form') ||  ($pagename == 'college-preparation') || ($pagename == 'advanced-programs') || ($pagename== 'general-tutoring') || ($pagename == 'act-and-other-test-preparation') || ($pagename == 'home') || ($pagename == 'contact-us')) echo 'col-sm-4' ?>">
 			<h2 class="header-2">Hours:</h2>
 			<dl>
 				<dt>Monday - Thursday</dt>

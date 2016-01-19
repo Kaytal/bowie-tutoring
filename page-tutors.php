@@ -59,7 +59,7 @@ get_header(); ?>
 					<?php if (($j % 3) == 0) echo '</div><div class="tutors">' ?>
 					<figure class="col-sm-4 tutor">
 							<?php if (tutorImage($tutor->ID) == '') : ?>
-								<img src="http://placehold.it/300" class="img-responsive img-center" alt="Placeholder Image">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/BowiePlaceholder.jpg" class="img-responsive img-center" alt="Placeholder Image">
 							<?php else : ?>
 								<?php echo tutorImage($tutor->ID) ?>
 							<?php endif ?>

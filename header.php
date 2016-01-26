@@ -65,7 +65,7 @@
 					</div>
 				</div>
 				<div class="col-sm-4 hidden-xs">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="img-responsive">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="img-responsive" alt="The Bowie Center Logo">
 				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->

@@ -22,7 +22,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div class="row">
-					<div class="entry-content <?php if ((is_front_page()) || ($pagename == 'subjects') ||  ($pagename == 'college-preparation') || ($pagename == 'advanced-programs') || ($pagename== 'general-tutoring') || ($pagename == 'act-and-other-test-preparation') || ($pagename == 'home') || ($pagename == 'contact-us')) echo 'col-sm-8'; else echo 'col-sm-12' ?>">
+					<div class="entry-content col-sm-12">
 						<header>
 							<h1 class="header-2"><?php echo $post->post_title ?></h1>
 						</header>

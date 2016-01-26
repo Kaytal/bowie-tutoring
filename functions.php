@@ -153,13 +153,12 @@ function getTestimonials()
 
 function getTutors()
 {
+
 	$args = array(
 		'numberposts'			=> -1,
 		'post_per_page'		=> -1,
 		'post_type'				=> 'tutor',
-		'post_status'			=> 'publish',
-		'order_by'				=> 'title',
-		'order'						=> 'ASC'
+		'post_status'			=> 'publish'
 		);
 
 	return get_posts($args);

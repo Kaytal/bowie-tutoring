@@ -50,6 +50,9 @@
 			<p>Away Sessions within a 5-mile radius - $10 traveling fee</p>
 			<p>Away Sessions outside a 5-mile radius will be determined individually</p>
 			<p>Test Prep Workbooks - $20 for most standardized tests</p>
+			<h2 class="header-2">Social</h2>
+			<p><a href="https://www.facebook.com/Bowie-Center-514464778728280"><i class="fa fa-facebook-official"></i> Like us on Facebook</a></p>
+			<p><a href="https://www.instagram.com/bowiecenter/"><i class="fa fa-instagram"></i> Follow us on Instagram</a></p>
 		</div>
 		<?php endif ?>
 

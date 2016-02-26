@@ -16,7 +16,35 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+			<?php if (getFaculty() != '' ) : ?>
+			<div class="row">
+				<div class="entry-content col-sm-12">
+					<header>
+						<h1 class="header-2">Our Faculty</h1>
+					</header>
+				</div>
+			</div>
+			<div class="tutors">
+				<?php $i=0; ?>
+				<?php $d = count(getFaculty()); ?>
+				<?php foreach (getFaculty() as $faculty ) : ?>
+					<?php if (($i % 3) == 0) echo '</div><div class="tutors">' ?>
+					<figure class="col-sm-4 tutor">
+							<?php if (facultyImage($faculty->ID) == '') : ?>
+								<img src="<?php echo get_template_directory_uri(); ?>/img/BowiePlaceholder.jpg" class="img-responsive img-center" alt="Placeholder Image">
+							<?php else : ?>
+								<?php echo facultyImage($faculty->ID) ?>
+							<?php endif ?>
+						<figcaption>
+							<h1 class="figure-header"><?php echo $faculty->post_title ?></h1>
+							<h2 class="figure-sub-header"><?php echo facultyPosition($faculty->ID) ?></h2>
+							<?php if (facultyInfo($faculty->ID) != '' ) : ?><p><?php echo facultyInfo($faculty->ID) ?></p><?php endif ?>
+						</figcaption>
+					</figure>
+					<?php $i++ ?>
+				<?php endforeach ?>
+			</div>
+		<?php endif ?>
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -24,21 +52,10 @@ get_header(); ?>
 				<div class="row">
 					<div class="entry-content col-sm-12">
 						<header>
-							<h1 class="header-2"><?php echo $post->post_title ?></h1>
+							<h1 class="header-2 tutor-head"><?php echo $post->post_title ?></h1>
 						</header>
 						<?php
-							the_content( sprintf(
-								/* translators: %s: Name of current post. */
-								wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'bowie_tutoring' ), array( 'span' => array( 'class' => array() ) ) ),
-								the_title( '<span class="screen-reader-text">"', '"</span>', false )
-							) );
-						?>
-
-						<?php
-							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bowie_tutoring' ),
-								'after'  => '</div>',
-							) );
+							the_content();
 						?>
 					</div><!-- .entry-content -->
 				</div>

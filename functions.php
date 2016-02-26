@@ -179,3 +179,32 @@ function tutorInfo( $post_id )
 	$args = array( 'post_id' => $post_id, 'output' => 'raw' );
 	return types_render_field( 'tutor-information', $args );
 }
+
+function getFaculty()
+{
+
+	$args = array(
+		'numberposts'			=> -1,
+		'post_per_page'		=> -1,
+		'post_type'				=> 'faculty',
+		'post_status'			=> 'publish'
+		);
+
+	return get_posts($args);
+}
+
+function facultyImage( $post_id )
+{
+	$args = array( 'post_id' => $post_id, 'output' => 'html', 'width' => '300', 'height' => '300', 'resize' => 'crop', 'class' => 'img-responsive img-center');
+	return types_render_field( 'faculty-image', $args );
+}
+function facultyPosition( $post_id )
+{
+	$args = array( 'post_id' => $post_id, 'output' => 'raw' );
+	return types_render_field( 'faculty-position', $args );
+}
+function facultyInfo( $post_id )
+{
+	$args = array( 'post_id' => $post_id, 'output' => 'raw' );
+	return types_render_field( 'faculty-information', $args );
+}

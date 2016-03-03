@@ -48,8 +48,8 @@
 			<p>Sessions before 6:00 PM - $60 per hour</p>
 			<p>Sessions after 6:00 PM - $65 per hour</p>
 			<p>Test Prep Workbooks - $20 for most standardized tests</p>
-			<p>Tutoring at sites away from The Bowie Center within a 5-mile radius - $10 traveling fee</p>
-			<p>Tutoring at sites away from The Bowie Center outside a 5-mile radius will be determined individually</p>
+			<p>Tutoring at sites away from The Bowie Center is dependent on availablity.</p>
+			<p>There are additional charges for all off campus sessions.</p>
 			<h2 class="header-2">Social</h2>
 			<p><a href="https://www.facebook.com/Bowie-Center-514464778728280"><i class="fa fa-facebook-official"></i> Like us on Facebook</a></p>
 			<p><a href="https://www.instagram.com/bowiecenter/"><i class="fa fa-instagram"></i> Follow us on Instagram</a></p>
